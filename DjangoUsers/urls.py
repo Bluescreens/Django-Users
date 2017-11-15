@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from users import views as users_views
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
@@ -24,5 +25,6 @@ urlpatterns = [
         {'template_name': 'login.html'}, name='login'),
     url(r'^logout/$', auth_views.logout,
         {'template_name': 'logged_out.html', 'next_page': '/'}, name='logout'),
+    url(r'^signup/$', users_views.signup, name='signup'),
     url(r'^admin/', admin.site.urls),
 ]
