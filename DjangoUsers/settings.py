@@ -29,6 +29,11 @@ ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = 'home'
 
+AUTHENTICATION_BACKENDS = [
+    'users.backends.UserModelEmailBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
