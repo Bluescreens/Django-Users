@@ -32,7 +32,7 @@ def update_profile(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            return redirect('settings:profile')
+            return redirect('home')
         else:
             print "Error!!!!!!!!!!!!!!!!!!!!!!!!"
     else:
