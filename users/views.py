@@ -34,7 +34,7 @@ def update_profile(request):
             profile_form.save()
             return redirect('home')
         else:
-            print "Error!!!!!!!!!!!!!!!!!!!!!!!!"
+            print("Error!!!!!!!!!!!!!!!!!!!!!!!!")
     else:
         user_form = UserForm(instance=request.user)
         profile_form = ProfileForm(instance=request.user.profile)
