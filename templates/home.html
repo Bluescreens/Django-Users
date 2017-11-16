@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Welcome, {{ user.get_full_name }} <small>{{ user.username }}</small>!</h2>
-  <p>Your birth date: {{ user.profile.birth_date }}</p>
+  <h2>{{ user.get_full_name }}</h2>
+	<ul>
+	  <li>Username: {{ user.username }}</li>
+	  <li>Birth Date: {{ user.profile.birth_date }}</li>
+	  <li>Address: {{ user.profile.address }}</li>
+	</ul>
 {% endblock %}
